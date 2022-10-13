@@ -1,0 +1,51 @@
+<div class="image">
+    <br />
+    <br />
+    <div class="container d-flex justify-content-center">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-50 p-4" style="color: rgb(3, 11, 51)">
+            <h4 class="text-center">Admin details</h4>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="username">Admin name</label>
+                    <input type="text" id="admin" class="form-control" formControlName="admin" />
+                    <span style="color: rgb(0, 4, 255)" class="small" *ngIf="
+              !loginForm.get('admin').valid && loginForm.get('admin').touched
+            ">
+            enter admin name</span
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            formControlName="password"
+          />
+          <span
+            style="color: rgb(0, 26, 255)"
+            class="small"
+            *ngIf="
+              !loginForm.get('password').valid &&
+              loginForm.get('password').touched
+            "
+            >enter password</span
+          >
+          <br />
+          <span
+            style="color: rgb(0, 60, 255)"
+            class="small"
+            *ngIf="loginForm.get('password').hasError('passwordStrength')"
+          >
+            {{ loginForm.get("password").errors["passwordStrength"] }}
+          </span>
+                </div>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-outline-primary">Login</button>
+        </form>
+    </div>
+</div>

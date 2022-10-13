@@ -1,0 +1,57 @@
+html {
+  height: auto;
+  border: 3px solid black;
+  border-radius: 25px;
+}
+
+
+.redText { color: red; }
+
+hr{
+        height: 2px;
+        background-color: red;
+        border: none;
+    }
+
+
+mark.orange { 
+  background-color: orange;
+  color: black;
+}
+
+mark.green { 
+  background-color: lightgreen;
+  color: black;
+}
+
+img.photo {
+  border: 3px solid black;
+}
+
+
+div.a{
+    padding-top: 8px;
+    
+}
+
+
+
+div.b{
+    padding-top: 18px;
+    
+}
+
+div.m{
+    font-size: 30px;
+}
+
+div.w{
+    word-wrap: break-word;
+}
+
+@media only screen and (max-width: 1000px) {
+    div.m{
+        font-size: 20px;
+    }
+}
+
